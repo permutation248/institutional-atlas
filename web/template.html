@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Institutional Atlas · 组织依赖图谱</title>
+<style>/*__INLINE_CSS__*/</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">IA</div><div><strong>Institutional<br>Atlas</strong><small>组织世界地图 · v0.1</small></div></div>
+    <div class="eyebrow">数据范围 / SCOPE</div>
+    <div class="scope">🇺🇸 美国 <span class="scope-note">示范数据集</span></div>
+    <div class="eyebrow nav-title">选择组织领域 / DOMAIN</div>
+    <div class="domain-nav" id="domain-nav"></div>
+    <div class="eyebrow">本领域独立入口</div>
+    <div id="root-nav" class="root-nav" aria-label="独立组织入口"></div>
+    <div class="sidebar-bottom"><span class="bullet"></span>每条结构关系附来源链接<br><span class="subhint">组织缺失 ≠ 组织不存在；未知 ≠ 零。</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><div class="eyebrow">INSTITUTIONAL DEPENDENCY GRAPH</div><h1>自上而下，探索组织如何连接</h1><p>节点代表组织 · 连线代表强依赖 · 点击节点进入下一层</p></div><div class="snapshot">快照 <span id="snapshot-date"></span></div></header>
+    <section class="coverage-bar" aria-label="数据覆盖情况" id="coverage-bar"></section>
+    <section class="toolbar">
+      <div class="searchwrap"><span class="search-icon">⌕</span><input id="search" placeholder="搜索组织名称 / 英文简称…" aria-label="搜索组织" autocomplete="off" /><div class="search-results" id="search-results" hidden></div></div>
+      <button id="btn-up" title="进入上一级">↑ 上一级</button><button id="btn-reset" title="本领域入口">⌂ 返回领域入口</button>
+      <button id="btn-export" title="导出当前完整数据集">↓ JSON</button>
+      <div class="zoom"><button id="btn-minus" aria-label="缩小">−</button><span id="zoom-label">100%</span><button id="btn-plus" aria-label="放大">＋</button></div>
+    </section>
+    <section class="canvas-panel"><div class="canvas-head"><div><nav class="breadcrumb" id="breadcrumb" aria-label="当前位置">美国 / 联邦政府</nav><div id="map-title">组织结构</div></div><div class="legend"><span class="legend-dot"></span> 强依赖边　　<span class="legend-muted">上下布局表示导航方向</span></div></div><div class="canvas" id="canvas"><svg id="graph" role="group" aria-label="交互式组织关系图"></svg></div><div class="canvas-foot"><span id="graph-summary">选择节点查看关联机构</span><span>点击节点可向下探索</span></div></section>
+    <section class="footnote"><span>研究原型 · 非完整美国机构名录 · 与所示组织无官方隶属关系。</span><span>Markdown 档案 → JSON → 离线 HTML</span></section>
+  </main>
+  <aside class="inspector"><div class="inspector-header"><div class="eyebrow">ENTITY PROFILE</div><h2>组织档案</h2></div><div id="inspector-content"></div></aside>
+</div>
+<script>const ATLAS_DATA = /*__EMBEDDED_DATA__*/;</script>
+<script>/*__INLINE_JS__*/</script>
+</body>
+</html>

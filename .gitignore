@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.env.*
+.DS_Store
+# Defense in depth: local research belongs in the sibling directory.
+/project-context/
+*.zip
+*.log
