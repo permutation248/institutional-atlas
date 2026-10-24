@@ -1,0 +1,35 @@
+{
+  "retrieved_at": "2026-10-24",
+  "source_period": "2025–26",
+  "files": [
+    {
+      "path": "hd2025.csv",
+      "source_url": "https://nces.ed.gov/ipeds/complete-data-files/HD2025.zip",
+      "sha256": "3f48135a1de007d68f110635a18fe23e93c2ad85f760c08755827657fccb076f",
+      "download_archive_sha256": "aadad9277a2255c85813b6d206475ddbf8a7330d79cc0236c2ecae685b00f1bf",
+      "bytes": 3631693
+    },
+    {
+      "path": "hd2025.xlsx",
+      "source_url": "https://nces.ed.gov/ipeds/complete-data-files/HD2025_Dict.zip",
+      "sha256": "806076876a87d1c4a845f9ae4319755889a094212fa39577ff33812f0fe8e6d9",
+      "download_archive_sha256": "dc454aa6fbc246f3d47d773cd02ebe3b5efcedacbd2f71c54ff39f5844215343",
+      "bytes": 170822
+    },
+    {
+      "path": "institutional-groupings.html",
+      "source_url": "https://nces.ed.gov/ipeds/use-the-data/institutional-groupings-in-ipeds",
+      "sha256": "6ebdb10df98baaea85e13343860fb6976f789678c6c69e330861befb6d089b64",
+      "bytes": 107326
+    },
+    {
+      "path": "public-access-policy.html",
+      "source_url": "https://nces.ed.gov/about/public-access-research",
+      "sha256": "516f9551135ca1a45d7a72ad747bc036c60ad8e9525114ac36292c0994db8fef",
+      "bytes": 67495
+    }
+  ],
+  "access_notes": [
+    "Official complete-data ZIP and dictionary downloaded successfully. DataFiles.aspx?gotoReportId=7&rtid=1&year=2025 hit a redirect loop; no bypass attempted and response not retained as source evidence. The official release listing was separately read through web search, and HD2025 source files establish the delivered version."
+  ]
+}

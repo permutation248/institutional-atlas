@@ -1,6 +1,6 @@
-# 组织视觉模型数据规范（v0.2）
+# 组织世界模型数据规范（v0.3）
 
-每个组织是 `data/entities/{domain}/{id}.md`。**组织、事件和资金机制的 YAML frontmatter 是结构化事实唯一来源；Markdown 正文仅用于人类叙述。** `scripts/build.py` 验证 ID、官网、引用、边类型、父节点存在性及环依赖，并生成单文件 HTML。地理州界属于有许可、带版本与哈希的外部地图素材，来源见 [MAP_SOURCES.md](MAP_SOURCES.md)。
+逐项研究的组织使用 `data/entities/{domain}/{id}.md`。**研究档案、事件和金融机制以 YAML frontmatter 为结构化事实来源；Markdown 正文仅用于人类叙述。** 官方完整名录从带 SHA-256 的原始快照导入 `data/catalogs/`，见下方目录层规范。 `scripts/build.py` 验证 ID、官网、引用、边类型、父节点存在性及环依赖，并生成单文件 HTML。地理州界属于有许可、带版本与哈希的外部地图素材，来源见 [MAP_SOURCES.md](MAP_SOURCES.md)。
 
 ```yaml
 ---
@@ -162,3 +162,12 @@ amount: null
 测试使用临时数据目录时，补充数据只从该目录同级的 `events`、`flows`、`geography` 读取；缺失目录表示空层，不会偷用正式项目数据。构建检查实体位置与治理字段、新闻引用/日期/URL、资金端点与机制口径，以及地图数据哈希。`coverage.json` 增加位置、使命、生态作用、治理与资金组织方式的字段覆盖量，以及事件、机制和州界数量。
 
 `metadata.snapshot_date` 是本地记录的最近核验/收录日期，不是构建执行时间。`network_verification_performed: false` 表示构建程序没有联网检查来源；人工采集行为仍由每份记录的来源和日期说明。
+
+
+## v0.3 完整目录层
+
+`data/catalogs/*.json` 由三份 `scripts/import_*.py` 从原始快照复建，包含 metadata 与 records。metadata 必须给出来源、采集日、期间、范围、排除项、原始文件路径及 SHA-256。构建仅校验本地快照，不自动联网更新。
+
+目录记录用 `record_kind: directory`，可缺少官网、位置、职责、负责人、治理和财务；`verified_at: null`，`catalog_records.retrieved_at` 是采集日期而非逐项核验日期。只有精确 `curated_id` 可合并研究档案，冲突稳定编号会阻止构建。`source_fields` 保留源目录的原始字段，不自动转换为现行关系或 HTTPS 事实。
+
+`data/catalog-links.json` 记录明确核验的跨目录同一身份；合并保留全部目录来源和标识，不依名称相似自动合并。发行人名录按明确名称归并证券，并保留各 ticker/exchange，但没有 CIK 时不能视为唯一法人目录。官方来源中的未知、历史记录和未处理重复均应在覆盖说明中可见。

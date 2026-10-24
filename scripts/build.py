@@ -17,6 +17,9 @@ from urllib.parse import urlsplit
 
 import yaml
 
+from catalogs import merge_catalogs
+from catalog_identity import merge_catalog_identities
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "entities"
 OUT = ROOT / "dist"
@@ -522,6 +525,11 @@ def load_data(data_dir=None, root=None):
         visit(node, [])
     if errors:
         raise ValueError("\n".join(errors))
+    for node in entities.values():
+        node["record_kind"] = "curated"
+    curated_count = len(entities)
+    catalogs = merge_catalogs(data_dir.parent / "catalogs", entities, root, valid_url)
+    identity_links = merge_catalog_identities(entities, root, valid_url, path=data_dir.parent / "catalog-links.json")
     # Keep all relation metadata, including temporal and quantified dependency evidence.
     edges = [{**copy.deepcopy(edge), "child_id": node["id"], "note": edge.get("note", "")}
              for node in entities.values() for edge in node["parents"]]
@@ -539,14 +547,17 @@ def load_data(data_dir=None, root=None):
         raise ValueError("duplicate flow mechanism; consolidate its evidence into one record")
     events.sort(key=lambda event: (event["date"], event["id"]), reverse=True)
     geography = load_geography(data_root / "geography", root)
-    snapshot_dates = [node["verified_at"] for node in entities.values()]
+    snapshot_dates = [node["verified_at"] for node in entities.values() if node.get("verified_at")]
+    snapshot_dates += [catalog["retrieved_at"] for catalog in catalogs]
     snapshot_dates += [node["research_reviewed_at"] for node in entities.values() if node.get("research_reviewed_at")]
     snapshot_dates += [event["reviewed_at"] for event in events] + [flow["as_of"] for flow in flows]
     return {
         "metadata": {
             "snapshot_date": max(snapshot_dates),
-            "scope": "Selected U.S. institutions; not a comprehensive directory",
-            "source_type": "local Markdown records; schema validation only",
+            "scope": "Official bulk directories plus researched institutional dossiers; see catalog scopes and exclusions",
+            "curated_entities": curated_count, "directory_entities": len(entities) - curated_count,
+            "catalogs": catalogs, "identity_links": identity_links,
+            "source_type": "Markdown dossiers and SHA-256 pinned official directory snapshots; schema validation only",
             "network_verification_performed": False,
             "total_entities": len(entities), "total_edges": len(edges),
             "total_events": len(events), "total_flows": len(flows),
@@ -575,7 +586,8 @@ def coverage_report(graph):
             "total_entities": total,
             "source_declared_status_counts": dict(sorted(Counter(node["verification_status"] for node in records).items())),
             "research_reviewed_entities": len(reviewed),
-            "inherited_entities": total - len(reviewed),
+            "inherited_entities": sum(node.get("record_kind") != "directory" and not node.get("research_reviewed_at") for node in records),
+            "directory_entities": sum(node.get("record_kind") == "directory" for node in records),
             "research_reviewed_dates": dict(sorted(Counter(node["research_reviewed_at"] for node in reviewed).items())),
             "official_website": field_coverage(lambda node: bool(node.get("official_url"))),
             "source_links": field_coverage(lambda node: bool(node.get("sources"))),
@@ -590,14 +602,17 @@ def coverage_report(graph):
             "funding_model": field_coverage(lambda node: node.get("funding_model") is not None),
             "max_recorded_hierarchy_depth": max((depth(node["id"]) for node in records), default=0),
         }
-    urls = [node["official_url"] for node in nodes]
+    urls = [node["official_url"] for node in nodes if node.get("official_url")]
     urls += [source["url"] for node in nodes for source in node["sources"]]
     urls += [edge["evidence_url"] for edge in graph["edges"]]
     urls += [event["source_url"] for event in graph.get("events", [])]
     urls += [flow["evidence_url"] for flow in graph.get("flows", [])]
     urls += [node[field]["evidence_url"] for node in nodes for field in ("location", "governance", "funding_model") if node.get(field)]
     return {
-        "schema_version": 2,
+        "schema_version": 3,
+        "catalogs": graph["metadata"].get("catalogs", []),
+        "curated_entities": sum(n.get("record_kind") == "curated" for n in nodes),
+        "directory_entities": sum(n.get("record_kind") == "directory" for n in nodes),
         "snapshot_date": graph["metadata"]["snapshot_date"],
         "network_verification_performed": False,
         "interpretation": "Counts describe local records. verification_status and research_reviewed_at are author declarations, not checks performed by this build. Field presence does not establish current accuracy or complete coverage.",

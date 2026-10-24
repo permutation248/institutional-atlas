@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "links": [
+    {
+      "source_id": "usagov-1066",
+      "target_id": "ipeds-197036",
+      "source_name": "U.S. Military Academy, West Point",
+      "target_name": "United States Military Academy",
+      "source_registry_url": "https://www.usa.gov/agencies/u-s-military-academy-west-point",
+      "target_registry_url": "https://nces.ed.gov/collegenavigator/?id=197036",
+      "official_url": "https://www.westpoint.edu/",
+      "reviewed_at": "2026-10-24",
+      "note": "两份已下载官方目录明确指向西点美国军事学院且官网相同：USA.gov node 1066 与 IPEDS UNITID 197036。人工对照名称、官网及教育性质后合并，保留 IPEDS 校园身份、坐标和分类；USA.gov 记录及原字段保存在合并来源中。这是个别身份对照，不从网站相同推导任意组织相同。"
+    }
+  ]
+}

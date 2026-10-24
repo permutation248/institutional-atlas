@@ -46,6 +46,12 @@ class VisualLayerTests(unittest.TestCase):
         self.assertIsNone(graph["geography"])
         self.assertEqual(len(graph["entities"]), 1)
 
+    def test_custom_data_directory_does_not_inherit_production_identity_links(self):
+        graph = load_data(self.data_dir)  # CLI --data-dir keeps the project root default.
+        self.assertEqual([node['id'] for node in graph['entities']], ['node-a'])
+        self.assertEqual(graph['metadata']['identity_links'], [])
+        self.assertEqual(graph['metadata']['catalogs'], [])
+
     def test_optional_profiles_are_exported_and_reported_without_inventing_a_leader(self):
         self.node.update({
             "location": {"lat": 38.9, "lon": -77.0, "city": "Washington", "state": "DC", "precision": "city", "evidence_url": "https://example.gov/contact"},

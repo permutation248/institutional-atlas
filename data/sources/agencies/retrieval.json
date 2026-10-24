@@ -1,0 +1,97 @@
+{
+  "retrieved_at": "2026-10-24",
+  "sources": [
+    {
+      "path": "data/sources/agencies/federal-register-agencies.json",
+      "sha256": "7a806d209d75ee543e6e91506e485ec6a8f42687056e14a1484c8bc9e79f5443"
+    },
+    {
+      "path": "data/sources/agencies/usagov-a.html",
+      "sha256": "b35817e6a999d28baeba400d3fd3cddfdad9c911170beab282c85da514642ca3"
+    },
+    {
+      "path": "data/sources/agencies/usagov-b.html",
+      "sha256": "c8019334ae24e448d4984e18d748a13e3850ed3cd475fa8e4a7cf51e87cbafaf"
+    },
+    {
+      "path": "data/sources/agencies/usagov-c.html",
+      "sha256": "e00e677e188376b56a22f047c0b8a1ba366231b847f37b97599c6a56b112d42a"
+    },
+    {
+      "path": "data/sources/agencies/usagov-d.html",
+      "sha256": "7a4a6c3a15348a7f263fe1f959cc91c43ec0968034109795a1050c6d3b4a3dfc"
+    },
+    {
+      "path": "data/sources/agencies/usagov-e.html",
+      "sha256": "148f296d2f56d4f88a84f49475fb3255947e3772de8345343b08b38374fe85b7"
+    },
+    {
+      "path": "data/sources/agencies/usagov-f.html",
+      "sha256": "0bb751c61f7d7d495015303e6adf3aa5243caa5fd137556279f60b2cea4e5f17"
+    },
+    {
+      "path": "data/sources/agencies/usagov-g.html",
+      "sha256": "3319481683c746e88cb879b7409539a2f045e938b2d8140fce080cee29ec4cbf"
+    },
+    {
+      "path": "data/sources/agencies/usagov-h.html",
+      "sha256": "6736d5f4b6a74ec19d04d14392a7d18a30d73e97e6e133be83be4414eac5fcc4"
+    },
+    {
+      "path": "data/sources/agencies/usagov-i.html",
+      "sha256": "1b6e2af1dcca18a0d3f4627324290c3db4f5c1dad77d3581eb6324808f1f76bc"
+    },
+    {
+      "path": "data/sources/agencies/usagov-j.html",
+      "sha256": "5b9d4f5f93c65dbf3d0689152ec471b25137044c5bd0c29668fc97c8ff0471d7"
+    },
+    {
+      "path": "data/sources/agencies/usagov-k.html",
+      "sha256": "5527ebd3fb106717d96900f985f2e688f61ea9a66726cd25c2cf07714b0f26ef"
+    },
+    {
+      "path": "data/sources/agencies/usagov-l.html",
+      "sha256": "be179a3dfceeb4f68321fa67312ae6e6dc771167d457882536bbbb7b0c313b21"
+    },
+    {
+      "path": "data/sources/agencies/usagov-m.html",
+      "sha256": "50c77420cd573ba46471374a92754b49c391a4db40997fd8d73a2276e87d49bc"
+    },
+    {
+      "path": "data/sources/agencies/usagov-n.html",
+      "sha256": "1e8029775b8be5d81ba6a555bb35225f79467c5e1fa6b4a7b9b5d402c6fb9abc"
+    },
+    {
+      "path": "data/sources/agencies/usagov-o.html",
+      "sha256": "10c1739e3d051898f2a9c55fa90e11196ac2366265aa2ea62ba18d79c5a0487a"
+    },
+    {
+      "path": "data/sources/agencies/usagov-p.html",
+      "sha256": "104724d9357496c0bfd73f42c7c33f8d2278ab9a085f9e60dc8cb6eb49abf7b6"
+    },
+    {
+      "path": "data/sources/agencies/usagov-r.html",
+      "sha256": "7661cc4b13bc0f402bcd12834723e09d54809aa4c651f3bb519c0aa91e84b747"
+    },
+    {
+      "path": "data/sources/agencies/usagov-s.html",
+      "sha256": "77937554d20c05bc32909ed533b93b1a48dac7b0b592b7e5b02a43694f6f939b"
+    },
+    {
+      "path": "data/sources/agencies/usagov-t.html",
+      "sha256": "18c82479be6ad15ee0dd1e92b0de1ea339ea3ccec3f5139536826ed2e84abe23"
+    },
+    {
+      "path": "data/sources/agencies/usagov-u.html",
+      "sha256": "37e9e3f38dad69d4612b21324a98a870e87ae82aa77dcf1ca67e587c8d637879"
+    },
+    {
+      "path": "data/sources/agencies/usagov-v.html",
+      "sha256": "ab74d170bd0d0b1306a49a1ce7953ae83996c15078ace018feabd0b4f07ee58c"
+    },
+    {
+      "path": "data/sources/agencies/usagov-w.html",
+      "sha256": "9a2bead8a17fdf324ee8ef0975d6fb1e39080c406819c45a483c0c65533153f5"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ case "$atlas_command" in
     ;;
   check)
     require_environment
-    for atlas_script in scripts/dev.sh 启动图谱.command 启动视觉模型.command; do
+    for atlas_script in scripts/dev.sh 启动图谱.command 启动视觉模型.command 启动世界模型.command; do
       bash -n "$atlas_script"
     done
     "$atlas_python" scripts/build.py

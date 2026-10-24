@@ -1,0 +1,233 @@
+Public Access to Research Policy | IES
+Skip to main content
+Breadcrumb
+Home
+arrow_forward_ios
+About IES
+arrow_forward_ios
+Public Access t ...
+Home
+arrow_forward_ios
+...
+arrow_forward_ios
+Public Access t ...
+About IES
+Public Access to Research Policy
+Public Access to Research Policy
+Implementation guide
+Frequently asked questions about providing public access to data
+IES Policy Regarding Public Access to Research
+Document
+Public access to research policy
+(351.14 KB)
+IES is implementing a new Public Access Plan over the course of Fiscal Years (FY) 2025 and 2026 that will affect all new awardees. Requests for Applications (RFAs) and for Proposals (RFPs) released in the 2024 calendar year will reflect new requirements for awards to be made in Fiscal Year 2025 (which begins on October 1, 2024). IES's new Public Access Plan brings IES policy into alignment with common open science standards, and reflects priorities outlined in
+the White House Office of Science and Technology Policy (OSTP) guidance
+issued in August 2022. These changes reflect a commitment to equity and increasing public access to and discoverability of federally funded research across U.S. funding agencies.
+The new Public Access Plan continues IES' strong commitment to open science practices including its commitment to
+pre-registration
+and
+open access
+to both publications and data. Awards made prior to October 1, 2024 are subject to the public access requirements outlined in the RFA/RFP to which the awardee applied, and are addressed in the Performance Agreement/Contract established in the year that the award was made.
+Important changes to public access requirements that will directly affect researchers funded through IES
+All publications stemming from federally funded work will be made freely available to the public immediately following publication.
+add
+remove
+Data sharing will be required at time of publication or, if unpublished, five years after the IES award ends, whichever comes first.
+add
+remove
+Unique digital persistent identifiers (PIDs) will need to be established for all key personnel, publications, awards, and datasets.
+add
+remove
+Open access must be granted
+as soon as the article is published
+for all articles proceeding from federal research funding. This requirement is being implemented across all U.S. federal funding agencies. There will no longer be a 12-month embargo for articles that are not published open access (OA). IES awardees receiving funds after October 1, 2024, will need to ensure (either through your publisher or your own efforts) that a full-text version of the published article is uploaded to
+ERIC
+immediately upon publication
+. To facilitate this transition, we encourage all awardees to publish their work in OA journals where feasible, and to budget for Article Processing Charges (APCs) accordingly. Additional guidance will be provided to support researchers in complying with this new requirement.
+IES applications have shifted from requesting a data management plan (DMP) to a data
+sharing
+and management plan (DSMP) to foreground the shift in emphasis to routine data sharing. Specific plans for sharing data and codes in an appropriate repository will need to be included in the DSMP. Applications for all research project types must include a DSMP starting in FY2025.
+The Public Access Plan
+below, section 7.2 describes conditions under which data may be exempt from sharing requirements, but all applications must indicate which data will and will not be shared, and articulate any grounds for exclusion. Each RFA will outline the required elements to include in the DSMP.
+Document
+Public access to research policy
+(351.14 KB)
+To ensure that data may be shared immediately upon publication, data curation will need to occur
+in advance
+of publication. One best practice approach is to prepare data files for sharing prior to data collection so that data are ready for sharing by the time data collection is complete (see
+Sharing Study Data: A Guide for Education Researchers
+). PIs may wish to budget for data curation in their applications to support this activity.
+In anticipation of new requirements, we encourage researchers to move away from hosting data sets on personal websites or making them available solely upon request. IES will be providing additional guidance on selection of an appropriate publicly-available data repository.
+Digital object identifiers (DOIs) for journal articles are PIDs that uniquely identify a single version of a single publication and can be used to identify and reference that specific publication. This same concept is now being extended to other aspects of the research enterprise including individuals, grant and contract awards, and datasets. This will facilitate discoverability of information by researchers and the public and will help IES track the impact of its funding investments.
+Starting in FY2024, all key personnel on new IES-funded projects are required to establish an individual digital PID (such as ORCID, see https://orcid.org/) prior to award. We encourage but do not yet require key personnel to register with ORCID prior to submitting their applications/proposals.
+New guidance for PID conventions for awards and for data linked to IES funding is forthcoming.
+Check back regularly for additional updates on IES's Public Access Plan implementation.
+Policy Statement on Public Access to Data Resulting from IES Funded Grants
+The Institute of Education Sciences (IES) is committed to advancing education research through providing access to scientific data collected through its grant-funded research programs. Such access provides opportunities for other researchers to review, confirm or challenge study findings, which is an important aspect of the scientific process. In addition, providing access to data can enhance scientific inquiry through a variety of other analytic activities, including the use of shared data to: test alternative theories or hypotheses; explore different sets of research questions than those targeted by the original researchers; combine data from multiple sources to provide potential new insights and areas of inquiry; and/or conduct methodological studies to advance education research methods and statistical analyses.
+The purpose of this document is to describe IES policy on providing access to research data collected through grants funded by its two research centers: the National Center for Education Research and the National Center for Special Education Research. Starting with the release of the FY2013 Request for Applications researchers applying for Goal Four Effectiveness grants under competitions 84.305A for Education Research or 84.324A for Special Education Research were required to include a data management plan (DMP) in their application. This requirement was extended to include Goal Three Efficacy and Replication grants under these competitions starting in FY2015, and to the Research Networks on Critical Problems of Policy and Practice (84.305N) competition for FY2016. For the purposes referred to in this policy statement, final research data are the recorded factual material commonly accepted in the scientific community as necessary to document and support research findings.1 For most studies, an electronic file will constitute the final research data. This data set will include the final, cleaned data and may include both original data and derived variables which will be fully described in accompanying documentation.
+Specific instructions for including the DMP in applications were included in the Request for Applications for these two grant competitions. All Goal Four Effectiveness and Goal Three Efficacy applications must include a plan that describes the data to be shared, the method of sharing (e.g., through the Principal Investigator or data repository), the written documentation that will accompany the data, the plan for preventing disclosure of personally identifiable information, and the timeline and costs for data sharing.
+Researchers funded by IES must be committed to protecting the rights and privacy of human subjects at all times. Providing access to data must not compromise this commitment. IES recognizes that data sharing may be complicated or limited by institutional policies, local Institutional Review Board (IRB) rules, as well as state and Federal laws and regulations that address issues of the rights and privacy of human subjects. Strategies for making data accessible should be addressed early in the planning process to allow time necessary to work with IRBs and those within the education settings to be studied. It is the responsibility of the researchers to develop a DMP that protects the rights of study participants and confidentiality of the data, as required by their IRB and state and Federal laws and regulations. Data that are to be shared should be free of identifiers that would allow linkages to individuals participating in the research as well as other elements that could lead to deductive disclosure of the individual study participants. If researchers believe that full data sharing is not possible, they must provide a written rationale.
+IES expects timely release of shared data files following the completion of a research study. In general, IES anticipates that the data will be shared no later than the acceptance of the main findings from the final study dataset in a peer-reviewed scholarly publication and that data will be available for at least 10 years. This implies that in most cases, the final dataset may not be completed and prepared for sharing until after the grant has been completed. Nonetheless, when the Principal Investigator and the authorized institutional official sign the cover page of the 84.305A Education Research or 84.324A Special Education Research grant application, they will be assuring compliance with IES policy on providing access to data as well as other policies and regulations governing research awards.
+Researchers may include the cost of data sharing in their grant application budget requests. This can include the costs of preparing and archiving the data to be shared, and preparing the data documentation.
+At this time, peer review panels will not rate the DMP in their scoring of the scientific merit of the application. IES staff will be responsible for overseeing the data sharing policy and for assessing the appropriateness and adequacy of the data management plan and associated costs.
+Information on the IES policy on public access to research is available on the IES website at {website for landing page (IES Policy Regarding Public Access to Research). This page includes links to the policies regarding publications and access to data In addition, the FY 2016 Request for Applications for Education Research (84.305A) and Special Education Research (84.324A) also provide information on preparing and submitting a DMP with the application.
+1
+Final research data does not mean summary statistics or tables, but rather the factual information on which summary statistics and tables are based. For the purposes of this policy, final research data do not include laboratory notebooks, partial datasets, preliminary analyses, drafts of scientific papers, plans for future research, peer review reports, or communications with colleagues.
+Designated Contact
+If publications are not available through any of the above methods, contact the staff member who is listed on the product information pages under the
+Questions:
+designation (i.e. For questions about the content of this product, please contact ...).
+Permission to Replicate Information
+Unless stated otherwise, all information on the U.S. Department of Education's IES website at http://ies.ed.gov is in the public domain and may be reproduced, published, linked to, or otherwise used without IES' permission. This statement does not pertain to information at websites other than http://ies.ed.gov, whether funded by or linked to from IES.
+The following citation should be used when referencing all IES products:
+U.S. Department of Education. Institute of Education Sciences.
+Contacting IES
+add
+remove
+Institute of Education Sciences
+550 12th Street, SW
+Washington, DC 20024, USA
+Telephone: 1-800-USA-LEARN
+Education Publications Center (ED Pubs)
+add
+remove
+https://orders.gpo.gov/EDU/EDUPubs.aspx
+PHONE: 1-877-433-7827
+EMAIL:
+customerservice.edpubs@gpo.gov
+FAX: 703-605-6794
+Government Printing Office (GPO)
+add
+remove
+https://bookstore.gpo.gov/
+PHONE: 1-866-512-1800.
+EMAIL:
+ContactCenter@gpo.gov
+FAX: 202-512-2104
+U.S. Government Publishing Office
+add
+remove
+P.O. Box 979050
+St. Louis, MO 63197-9000
+Ordering Products
+Education Publications Center (ED Pubs)
+Until supplies are exhausted, a single copy of a publication or CD-ROM may be obtained at
+NO COST
+from
+ED Pubs
+. Before requesting a copy make sure you have the complete title and IES number for the publication—The Enhanced Reading Opportunities Study, NCEE 2008-4015, for example. ED Pubs does not have products for sale, so
+DO NOT
+send money or checks when ordering products.
+Government Printing Office (GPO)
+If you need more than one copy of a publication or ED Pubs' supplies have been exhausted, they may be purchased from the Government Printing Office (GPO). Not all IES publications may be obtained from GPO so you will need to check availability. To order a copy from GPO you must have the GPO Number—the number should resemble this example: GPO # 065-000-00871-8. The GPO # and price can be accessed by going to
+GPO Online
+and entering the title of the product.
+Federal Depository Libraries
+For older publications, the only source for an IES publication may be a
+Federal Depository Library
+.
+Designated Contact
+If publications are not available through any of the above methods, contact the staff member who is listed on the product information pages under the
+Questions:
+designation (i.e. For questions about the content of this product, please contact ...).
+Education Publications Center (ED Pubs)
+https://orders.gpo.gov/EDU/EDUPubs.aspx
+PHONE: 1-877-433-7827
+EMAIL:
+customerservice.edpubs@gpo.gov
+FAX: 703-605-6794
+Government Printing Office (GPO)
+https://bookstore.gpo.gov/
+PHONE: 1-866-512-1800.
+EMAIL:
+ContactCenter@gpo.gov
+FAX: 202-512-2104
+Search Aides
+Navigational Aides
+NCES offers easy menu navigation throughout the site, and quick links to popular NCES sites on the homepage. At the bottom of every page is the NCES footer, which includes links to other main areas of the NCES site including our
+Privacy & Security Policy
+, our
+Statistical Standards
+and the
+NCES Site Index
+which provides one-click access to all NCES areas. Additionally, the footer includes links to the most recent highlights found on the NCES homepage.
+Data Search Tools
+The NCES Publications & Products Search also includes access to a wide variety of
+Data Search Tools
+, which include the following:
+Search for Schools, Colleges, and Libraries
+- Conduct a quick national search and locate information within four areas. Choose among postsecondary institutions, public schools, public libraries, or private schools in the United States.
+College Navigator
+- Search for a college based on its location, program, or degree offerings, either alone or in combination. If you are not sure which colleges might be of interest, College Navigator has the tools to help you. Once you've found some colleges of interest, you can browse through and compare information on tuition, phone numbers, addresses, classification and much more.
+Public School and School District Search
+- Obtain the correct name, address, phone number, NCES ID number, and other student and teacher characteristics of a
+public school
+or
+public school district
+anywhere in the nation.
+Private School Search
+- This tool allows you to retrieve information on a particular U.S. private school, or a group of schools from our private school directory.
+Public Library Search
+- Is a tool to help you retrieve information about a public library or a public library service outlet in the U.S. when you know some, but not all of the information about it.
+State Education Data Profiles
+- Search for statewide information in elementary/secondary education, postsecondary education and selected demographics for all states in the U.S.
+Quick Tables & Figures
+- This search tool allows you to locate all tables/figures published in the inventory of NCES' "Education Statistics Quarterly"; the National Education Data Resource Center Tables Library; and many NCES publications.
+The Data Analysis System (DAS)
+- The Data Analysis System (DAS) is a Windows software tool that allows users access to Education survey data by generating tables based on row and column variables of interest to them.
+Public School District Finance Peer Search
+- This search will allow you to compare the finances of a school district with its peers (those districts which share similar characteristics to the one you choose).
+Census 2000 School District Maps
+- This mapping application provides an easy-to-use, interface to state, county and school district information for 2000.
+IPEDS Peer Analysis System
+- This is a search tool for selecting postsecondary education institutions based on criteria chosen by you. These selected institutions are then compared to their peer institutions (again, defined by you).
+International Archive of Education Data
+- NCES sponsors this project to acquire, process, document, and disseminate data collected by national, state, provincial, local, and private organizations, pertaining to all levels of education in countries for which data can be made available.
+Publications/Data Products
+To search for NCES products (including both publications and data products) use our Publications & Products Search. The
+Publications & Products Search
+provides numerous search methods and listings based on a specific time frame, type of publication, or other criteria.
+Publications released in the last 90 days
+- Presents all publications released in the last 90 days, ordered by release date, and with a brief description.
+Data products released in the last 6 months
+- Presents all data products released in the last 6 months, ordered by release date, and with a brief description.
+Browse Publications by:
+Subject A-Z
+- If you don't know any specific product information, but do know the topic you are interested in, you should browse this list of products organized by subject.
+Survey/Program Area
+- If all you know is the survey or program area where the publication or data product originated, here is where you should look.
+Search for NCES Products by
+:
+Type - If you happen to know only the
+type of the publication
+you're looking for, e.g.
+Handbook
+, here is where you should look.
+NCES Publication Number - For users who know the exact publication number they are looking for, e.g.
+2006030
+, you should search by this criteria.
+NCES Author - Use this search category if you only know the author's name, e.g.
+Johnson, Frank
+. You can use first name only, last name only, first name and last name separated by a space, or last name and first name separated by a comma.
+Additional Search Options - If you want to be specific about dates and keywords in the title and product description, use this search option.
+Site-wide Searches
+For all other search needs, or if you are just browsing, you can
+search
+our web pages by using the search link that is located at the top, and in the footer, of all our pages. Many commonly used search terms are associated with a "key match" that we have targeted to assist our users to find pages of interest with a higher probability.
+Staff Information
+Have you had trouble locating the right person to contact at NCES? We have attempted to make yours an easy task with our
+NCES Staff Directory
+. You can locate all NCES staff members alphabetically, or select one of several options to locate staff by the survey/program area they work in, topic of expertise, or service area.
+Alternative Methods of Obtaining Information
+While most users can find what they need using our
+Publications & Products Search
+, here are other ways of finding statistical information on the NCES site.
+Fast Facts about Education
+- Find in-depth answers to some common research issues using a categorically arranged subject list. You can also find a daily "Did You Know" and a weekly "Data Snapshot". All of these are searchable in our "Fast Facts" database. Just enter a key word to receive a list of items. Links are provided to take you to the source documentation for all references.
+News Flash Subscription Service
+- Stay informed of NCES publications and many other areas of interest using this convenient service. You can customize the areas you are interested in and have news updates automatically e-mailed to you.
+Contact NCES
+- This e-mail inquiry will be automatically directed to the appropriate NCES staff member based on the subject you select.
+icon-dot-gov
+icon-https
+icon-quote

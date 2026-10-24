@@ -38,7 +38,7 @@ jobs:
           node --test tests/frontend_contract.test.cjs
       - name: Check local launcher syntax
         run: |
-          for script in scripts/dev.sh 启动图谱.command 启动视觉模型.command; do
+          for script in scripts/dev.sh 启动图谱.command 启动视觉模型.command 启动世界模型.command; do
             bash -n "$script"
           done
       - name: Save offline build for review

@@ -1,0 +1,3 @@
+# Official source snapshots are evidence: preserve their exact bytes and hashes.
+# Keep provenance/methodology in the reviewable docs/ and catalog metadata.
+data/sources/** -text -diff
