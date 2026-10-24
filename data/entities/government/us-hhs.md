@@ -12,8 +12,8 @@ leader:
   name: Robert F. Kennedy, Jr.
   title: Secretary of Health and Human Services
   status: serving
-  as_of: '2026-10-19'
-  evidence_url: https://www.hhs.gov/about/leadership/index.html
+  as_of: '2026-10-24'
+  evidence_url: https://www.whitehouse.gov/administration/cabinet/
 employee_count: null
 financial_profile: []
 publications: []
@@ -33,11 +33,39 @@ sources:
   description: 继承快照的负责人证据；是否当日重新读取见 research_notes
 - url: https://www.whitehouse.gov/administration/cabinet/
   description: 当日读取的 Cabinet 名录；现任姓名和头衔
+- url: https://www.usa.gov/agencies/u-s-department-of-health-and-human-services
+  description: 2026-10-24 使命／治理／位置／资金机制补充
+- url: https://www.whitehouse.gov/government/executive-branch/
+  description: 已读行政分支和内阁制度说明
+- url: https://www.usa.gov/federal-budget-process
+  description: 已读一般联邦预算程序；不用于填报部门金额
 verified_at: '2026-10-19'
 verification_status: partial
-research_reviewed_at: '2026-10-19'
+research_reviewed_at: '2026-10-24'
 research_notes: 本轮阅读 USAGov 继任名单及 White House 现行 Cabinet 正文，复核部门范围和当前负责人；serving 表示当前官网列示其现任姓名及头衔；本轮未逐一独立核验参院确认程序。职责细节、完整内设、人数与财务仍待后续核验。
-  已另读 HHS Leadership 和 2026-06-23 Divisions 目录。
+  已另读 HHS Leadership 和 2026-06-23 Divisions 目录。 2026-10-24 补读现行 Cabinet 名录并复核负责人，另补读职责、城市和一般治理／财政制度；具体项目预算金额、完整内设和决策授权细节仍未穷尽。
+mission: 改善公众健康并提供重要的人类服务。
+ecosystem_role: 联邦健康政策、医疗公共项目与生物医学研究的组织节点。
+location:
+  lat: 38.9072
+  lon: -77.0369
+  city: Washington
+  state: DC
+  precision: city
+  evidence_url: https://www.usa.gov/agencies/u-s-department-of-health-and-human-services
+  note: 城市级近似坐标，非建筑入口；仅定位组织办公城市，不代表事件发生地。
+governance:
+  apex: Secretary of Health and Human Services／依法履职者
+  mechanism: 部长领导部门执行法定职责，并接受总统的行政领导；具体决定通过依法授权的部门流程形成。内阁为总统咨询机制，不要求每项部门决定都经全体一致同意。
+  evidence_url: https://www.whitehouse.gov/government/executive-branch/
+funding_model:
+  summary: 联邦财政框架中的部门项目和运营；本记录说明机制，不代表当期拨款、收入或实际支出金额。
+  inflows:
+  - 依法律和国会拨款提供的预算资源（具体项目来源待细分）
+  outflows:
+  - 法定健康与公共服务项目
+  - 公共卫生、研究与部门运行
+  evidence_url: https://www.usa.gov/federal-budget-process
 ---
 
 # 美国卫生与公众服务部 / Department of Health and Human Services
@@ -48,4 +76,4 @@ research_notes: 本轮阅读 USAGov 继任名单及 White House 现行 Cabinet �
 
 ## 备注与边界
 
-待继续核验更细的内部机构、公开发布渠道、财务口径及负责人。
+本轮已补充职责、负责人和城市信息；完整内设、公开发布渠道及财务金额待继续核验。

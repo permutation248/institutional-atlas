@@ -31,11 +31,23 @@ sources:
   description: NIH 领导名单
 - url: https://www.hhs.gov/about/leadership/index.html
   description: 当日读取 HHS Leadership：NIH Director Jay Bhattacharya
+- url: https://www.usa.gov/agencies/national-institutes-of-health
+  description: 2026-10-24 使命／治理／位置／资金机制补充
 verified_at: '2026-10-19'
 verification_status: partial
-research_reviewed_at: '2026-10-19'
-research_notes: 本轮已读 HHS Divisions 正文，复核名称、职责和 HHS 组成关系；负责人须另见领导证据，人数与财务待核验。 NIH 领导页返回 403；负责人由当日可读的 HHS
-  Leadership 页面交叉确认。该页面注明的内容复核日为 2025-02-21，不等于本次采集日。
+research_reviewed_at: '2026-10-24'
+research_notes: 本轮已读 HHS Divisions 正文，复核名称、职责和 HHS 组成关系；负责人须另见领导证据，人数与财务待核验。 NIH 领导页返回 403；负责人由当日可读的 HHS Leadership
+  页面交叉确认。该页面注明的内容复核日为 2025-02-21，不等于本次采集日。 2026-10-24 新增字段按所附来源局部复核；原负责人日期保留，不代表今天重查。
+mission: 开展并支持医学研究。
+ecosystem_role: 医疗知识生产与联邦科研资助的重要节点。
+location:
+  lat: 38.9847
+  lon: -77.0947
+  city: Bethesda
+  state: MD
+  precision: city
+  evidence_url: https://www.usa.gov/agencies/national-institutes-of-health
+  note: 城市级近似坐标，非建筑入口；仅定位组织办公城市，不代表事件发生地。
 ---
 
 # 美国国立卫生研究院 / National Institutes of Health

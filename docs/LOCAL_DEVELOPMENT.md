@@ -14,7 +14,7 @@ Git 根目录只位于 `institutional-atlas/`。不要在共同父目录再初�
 
 ## 运行与更新
 
-按照 README 安装项目内虚拟环境。`scripts/dev.sh check` 执行构建和测试；`scripts/dev.sh serve` 构建后启动本机预览。macOS 用户可双击根目录 `启动图谱.command`。直接双击 `dist/index.html` 适合不需要开发服务器的离线浏览。
+按照 README 安装项目内虚拟环境。`scripts/dev.sh check` 执行构建和测试；`scripts/dev.sh serve` 构建后启动本机预览。macOS 用户可双击根目录 `启动视觉模型.command`（旧 `启动图谱.command` 兼容）。直接双击 `dist/index.html` 适合不需要开发服务器的离线浏览。
 
 事实更新顺序：阅读原始官方页面 → 编辑 Markdown → 保留来源和准确日期 → 构建 → 测试 → 浏览器刷新检查 → 检查 diff → commit → push。
 
@@ -43,4 +43,8 @@ git push
 
 本地测试验证结构、字段、生成逻辑及浏览器交互；CI 不会自动判定一个 URL 的正文支持某条事实。自动覆盖统计也不是全网完整性或事实真实性的证明。
 
-下一轮从 `docs/COVERAGE.md` 的未覆盖目录开始，遵循 `AGENTS.md` 的证据要求。公开服务、自动采集、数据库和 AI 分析需要独立实现与验收，不属于当前静态图谱的既有能力。
+下一轮从 `docs/COVERAGE.md` 的未覆盖目录开始，遵循 `AGENTS.md` 的证据要求。公开服务、自动采集、数据库和 AI 分析需要独立实现与验收，不属于当前静态视觉模型的既有能力。
+
+## 前端验证
+
+`dev.sh check` 在可用 Node.js 20+ 时额外运行 `node --test tests/frontend_contract.test.cjs`；Node 不可用会明确输出跳过，Python 构建仍可用。CI 中前端测试为必跑项。地图与数据不依赖外部运行时资源；浏览器 QA 覆盖1440px桌面和390px移动端、搜索、机构选择、三分支下钻、金融路径、事件筛选、深链接与JSON导出。地图许可与离线资产详见 `docs/MAP_SOURCES.md`。

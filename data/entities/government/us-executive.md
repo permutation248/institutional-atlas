@@ -29,9 +29,15 @@ sources:
   description: 总统官方页面
 verified_at: '2026-10-19'
 verification_status: partial
-research_reviewed_at: '2026-10-19'
-research_notes: 本轮已读 USAGov 三分支正文，核验该节点的宪制定位与所列组成边。其余字段按各自来源；未全面重查人数和财务。 已重读总统官方个人页，确认 Donald J. Trump
-  的总统头衔。
+research_reviewed_at: '2026-10-24'
+research_notes: 本轮已读 USAGov 三分支正文，核验该节点的宪制定位与所列组成边。其余字段按各自来源；未全面重查人数和财务。 已重读总统官方个人页，确认 Donald J. Trump 的总统头衔。 2026-10-24
+  新增字段按所附来源局部复核；原负责人日期保留，不代表今天重查。
+mission: 依法实施联邦法律与行政政策。
+ecosystem_role: 公共政策执行、国防外交与行政服务。
+governance:
+  apex: 总统是行政分支领导者
+  mechanism: 总统与行政机构在各自权限内作出决定；预算立法、任命确认与司法审查形成外部约束。
+  evidence_url: https://www.usa.gov/branches-of-government
 ---
 
 # 行政分支 / Executive Branch

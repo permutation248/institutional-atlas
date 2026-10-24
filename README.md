@@ -1,83 +1,71 @@
-# Institutional Atlas · 从组织结构理解世界
+# 组织视觉模型 · Organization Visual Model
 
-以组织为节点，以正式组成、负责、控制、职能授权和经过证明的持续资金依赖为边，自上而下探索社会的组织结构。首个案例是美国联邦政府；金融、企业和大学使用同一套模型。
+把**组织在哪里、属于谁、如何形成决定、资金如何流动**放进一幅可探索的社会地图。美国是首个案例；Institutional Atlas 保留为代码仓库名称。
 
-这是一个 **Markdown 驱动、证据可追溯、可离线浏览** 的研究原型。普通合作、竞争、监管和一笔资助不会自动变成组织隶属关系。不同领域保留独立入口。
+![组织视觉模型美国全景](preview.jpg)
 
-![Institutional Atlas 本地原型](preview.jpg)
+## v0.2 能做什么
 
-## 直接使用
+- **地理全景**：真实美国 50 州与 DC 州界、AK/HI 插图、组织位置、聚合点、拖动与缩放、事件光圈。
+- **组织层级**：联邦三分支、15 个行政部门、重点下属机构、大学系统、企业与金融机构的正式结构；点击继续下钻。
+- **治理档案**：官网、使命、生态定位、最高治理主体、议事与共识形成程序、负责人和逐项来源。
+- **金融流转**：财政与公共服务、货币与信贷、资本与创新三条探索路径；来源、用途、机制说明与官方证据。
+- **事件观察**：有日期的官方新闻卡片，按领域、当前机构与近 30/90 天筛选，点击联动地图。
+- **可维护本地模型**：Markdown 事实源 → 校验 → JSON / 单文件 HTML。搜索、深链接、JSON 导出、响应式布局与键盘操作。
 
-双击 [`dist/index.html`](dist/index.html)，即可离线打开图谱，无需数据库、Node、API key 或第三方 CDN。
+这一版收录 **132 个组织、90 条正式结构关系、18 条金融机制、14 条事件**；政府 71、大学 33、企业 16、金融 12。地图、治理与资金说明的最新字段覆盖见 [`dist/coverage.json`](dist/coverage.json)。这不是完整美国组织名录，也不是实时行情或新闻服务。
 
-支持：四个领域切换、中英文搜索、组织下钻、上一级与面包屑导航、缩放、官网与证据跳转、领导任职状态、人员和财务资料、JSON 导出、通过 `#机构ID` 定位档案。
+## 使用
 
-在 macOS 也可双击 `启动图谱.command` 启动开发预览。终端开发方式见下文。
+macOS 双击 [`启动视觉模型.command`](启动视觉模型.command)。旧的 `启动图谱.command` 继续兼容。也可直接打开 [`dist/index.html`](dist/index.html)；页面、地图和数据均已内嵌，不需要地图 API key。官网/来源链接需联网。
 
-## 本地开发
-
-需要 Python 3.9 或更高版本。依赖安装到项目虚拟环境：
+本地开发：
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python scripts/build.py
-.venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python -m http.server 8765 --bind 127.0.0.1 --directory dist
+scripts/dev.sh setup
+scripts/dev.sh check
+scripts/dev.sh build
+scripts/dev.sh open
 ```
 
-浏览器打开 <http://127.0.0.1:8765>。源码修改后重新构建并刷新页面。服务器只提供 `dist/`，并只监听本机；同级本地研究资料不在服务目录中。
+浏览器地址：<http://127.0.0.1:8765/>。Python 3.9+ 用于构建；Node.js 20+ 仅用于前端开发测试，打开产物无需 Node。服务只提供 `dist/`，监听本机。
 
-## 数据范围与可信度
+示例路径：
 
-当前 **76 个节点、72 条关系**，比原始项目新增 25 个政府节点与对应关系。本地化版本核验美国政府顶层与优先子树，扩展 Treasury、HHS、Commerce 和部分独立机构。最新数字见 [`docs/COVERAGE.md`](docs/COVERAGE.md) 和自动生成的 [`dist/coverage.json`](dist/coverage.json)。
+- [联邦三分支](http://127.0.0.1:8765/#us-federal-government?view=structure)
+- [加州大学与十个校区](http://127.0.0.1:8765/#uc-system?view=structure)
+- [联储与货币机制](http://127.0.0.1:8765/#us-fed?view=finance)
+- [斯坦福大学](http://127.0.0.1:8765/#stanford?domain=university)
+- [微软公司](http://127.0.0.1:8765/#microsoft?domain=enterprise)
 
-- 美国政府：联邦三大分支、15 个行政部门、国会两院、最高法院，以及部分部门内设机构与独立机构。
-- 高校：加州大学系统及十个校区。
-- 企业：Alphabet 与三个 SEC 披露的代表性子公司。
-- 金融：Bank of America Corporation 与 Bank of America, N.A.。
+## 数据语义
 
-**这不是完整美国组织名录，也不是实时财务数据库。** 人数、财务和领导字段允许缺失，未知不等于零。原包记录与本轮官方来源复核在界面中分别标示；“本轮复核”也不代表所有字段都已完整确认。具体核验范围、冲突和无法访问的来源见 [`docs/RESEARCH_2026-10-19.md`](docs/RESEARCH_2026-10-19.md)。
+正式组成、汇报、控制、职能授权和经量化证明的持续资金依赖进入结构层。普通监管、银行贷款、合同与一次资助不会自动成为隶属关系。国家是导航范围，三权分立中的国会与最高法院不向总统汇报。
 
-## 编辑组织与关系
+金融图展示**有依据的制度机制**，线宽不代表金额；家庭、投资者等概念部门不算组织。机构资金模型的业务归纳按来源说明性质。预算授权、拨款、支出承诺、实际支出、收入和净利润分开处理，未知金额保留为空。
 
-唯一人工事实来源为 `data/entities/{domain}/{id}.md`。修改 YAML frontmatter，构建程序会校验并生成 JSON、覆盖统计和独立 HTML。不要直接手改 `dist/`。
+事件是截至 **2026-10-24** 的人工核验快照；事件光圈使用关联机构的位置，不能解读为现场位置。地图位置目前主要为官方地址确认城市后的近似坐标，不能用于导航。
 
-每个组织尽量记录职责、官网、准确的领导岗位及任职状态、公告入口、人员统计口径、内部组成、财务指标与原始证据。每条关系都独立附官方来源。关系以“子组织 → 上级/依赖对象”存储，页面自上而下展示导航方向。详细字段见 [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md)，语义见 [`docs/ONTOLOGY.md`](docs/ONTOLOGY.md)。
+研究记录：[政府与事件](docs/RESEARCH_GOVERNANCE_2026-10-24.md)、[大学、企业与金融](docs/RESEARCH_UNIVERSE_2026-10-24.md)、[地图来源与许可](docs/MAP_SOURCES.md)。未补齐字段和范围见 [覆盖说明](docs/COVERAGE.md)。
 
-国家是导航范围，不能因处于同一国家就添加上下级关系。国会与最高法院不向总统汇报，州政府不是联邦普通下属部门，大学取得科研拨款也不会因此成为资助机构的下属。
-
-## 目录
+## 目录与维护
 
 ```text
 institutional-atlas/
-├── AGENTS.md / CODEX_TASK.md  # 继续开发的规范与任务
-├── VISION.md                 # 长期方向
+├── VISION.md                 # 定位与纲要
 ├── data/entities/            # 一组织一份 Markdown
-├── docs/                     # 本体、数据规范、来源、覆盖与路线
-├── scripts/                  # 构建与本地开发工具
-├── web/                      # HTML / CSS / JavaScript 源码
-├── dist/                     # 可离线分发的生成产物
-├── tests/                    # 构建与数据校验
-└── .github/workflows/        # 自动构建与测试
+├── data/events/              # 日期明确的官方事件
+├── data/flows/               # 有来源的金融机制
+├── data/geography/           # 许可、来源、真实州界资产
+├── web/                      # HTML / CSS / JavaScript
+├── scripts/                  # 校验、构建和本地服务
+├── tests/                    # 数据与前端契约测试
+├── dist/                     # 自动生成的可离线产物
+└── docs/                     # 本体、数据规范、研究、覆盖
 ```
 
-聊天原文、原始压缩包、个人思路和过程记录保存在仓库外的同级 `project-context/`。该目录不参与 Git 同步。公开项目文档仍保留在仓库内，便于他人理解和运行。
+编辑 Markdown / `web/` 后构建并测试；不要手改 `dist/`。工作规范见 [AGENTS.md](AGENTS.md)，字段见 [数据模型](docs/DATA_MODEL.md)，语义见 [本体](docs/ONTOLOGY.md)，开发步骤见 [本地开发](docs/LOCAL_DEVELOPMENT.md)。
 
-## 同步 GitHub
+聊天原文、下载包、私人思路与过程截图继续放在仓库外的同级 `project-context/`，不参与 Git 同步。
 
-```bash
-git pull --ff-only
-# 编辑、构建、测试并检查 git diff 后：
-git add data docs web scripts tests dist README.md
-git commit -m "Describe the verified change"
-git push
-```
-
-同步是显式的 Git 操作。没有后台自动上传，也不需要把本地聊天或密钥加入仓库。开发流程详见 [`docs/LOCAL_DEVELOPMENT.md`](docs/LOCAL_DEVELOPMENT.md)。
-
-## 下一步
-
-继续完善其余行政部门的公开第二层组织；按字段核验领导、公告、人数与财务口径；建立事实有效期及变更历史。完整路线见 [`docs/ROADMAP.md`](docs/ROADMAP.md)。先建立可核验事实，再探索更广的组织与资源世界模型。
-
-代码采用 [MIT License](LICENSE)。第三方内容与数据源的使用条件分别适用。项目与所示组织无官方隶属或背书关系。
+代码采用 [MIT License](LICENSE)。美国地图资产另附 ISC 许可和 Census 衍生来源。界面参考 [World Monitor](https://github.com/koala73/worldmonitor) 与 [God’s Eye View](https://github.com/bilawalsidhu/gods-eye-view) 的多层空间观察方式，没有复制其应用代码。项目与所示组织无官方隶属或背书关系。

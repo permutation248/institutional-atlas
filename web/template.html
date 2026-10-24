@@ -1,38 +1,24 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Institutional Atlas · 组织依赖图谱</title>
-<style>/*__INLINE_CSS__*/</style>
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080f17"><meta name="description" content="组织视觉模型：在美国地图上探索组织、治理机制、金融流转与公开事件。"><title>组织视觉模型 · Organization Visual Model</title><style>/*__INLINE_CSS__*/</style></head>
 <body>
-<div class="layout">
-  <aside class="sidebar">
-    <div class="brand"><div class="logo">IA</div><div><strong>Institutional<br>Atlas</strong><small>组织世界地图 · v0.1</small></div></div>
-    <div class="eyebrow">数据范围 / SCOPE</div>
-    <div class="scope">🇺🇸 美国 <span class="scope-note">示范数据集</span></div>
-    <div class="eyebrow nav-title">选择组织领域 / DOMAIN</div>
-    <div class="domain-nav" id="domain-nav"></div>
-    <div class="eyebrow">本领域独立入口</div>
-    <div id="root-nav" class="root-nav" aria-label="独立组织入口"></div>
-    <div class="sidebar-bottom"><span class="bullet"></span>每条结构关系附来源链接<br><span class="subhint">组织缺失 ≠ 组织不存在；未知 ≠ 零。</span></div>
-  </aside>
-  <main class="main">
-    <header class="topbar"><div><div class="eyebrow">INSTITUTIONAL DEPENDENCY GRAPH</div><h1>自上而下，探索组织如何连接</h1><p>节点代表组织 · 连线代表强依赖 · 点击节点进入下一层</p></div><div class="snapshot">快照 <span id="snapshot-date"></span></div></header>
-    <section class="coverage-bar" aria-label="数据覆盖情况" id="coverage-bar"></section>
-    <section class="toolbar">
-      <div class="searchwrap"><span class="search-icon">⌕</span><input id="search" placeholder="搜索组织名称 / 英文简称…" aria-label="搜索组织" autocomplete="off" /><div class="search-results" id="search-results" hidden></div></div>
-      <button id="btn-up" title="进入上一级">↑ 上一级</button><button id="btn-reset" title="本领域入口">⌂ 返回领域入口</button>
-      <button id="btn-export" title="导出当前完整数据集">↓ JSON</button>
-      <div class="zoom"><button id="btn-minus" aria-label="缩小">−</button><span id="zoom-label">100%</span><button id="btn-plus" aria-label="放大">＋</button></div>
-    </section>
-    <section class="canvas-panel"><div class="canvas-head"><div><nav class="breadcrumb" id="breadcrumb" aria-label="当前位置">美国 / 联邦政府</nav><div id="map-title">组织结构</div></div><div class="legend"><span class="legend-dot"></span> 强依赖边　　<span class="legend-muted">上下布局表示导航方向</span></div></div><div class="canvas" id="canvas"><svg id="graph" role="group" aria-label="交互式组织关系图"></svg></div><div class="canvas-foot"><span id="graph-summary">选择节点查看关联机构</span><span>点击节点可向下探索</span></div></section>
-    <section class="footnote"><span>研究原型 · 非完整美国机构名录 · 与所示组织无官方隶属关系。</span><span>Markdown 档案 → JSON → 离线 HTML</span></section>
-  </main>
-  <aside class="inspector"><div class="inspector-header"><div class="eyebrow">ENTITY PROFILE</div><h2>组织档案</h2></div><div id="inspector-content"></div></aside>
+<a class="skip-link" href="#workspace">跳到主视图</a>
+<header class="masthead"><a class="brand" href="#us-federal-government"><span class="brand-mark" aria-hidden="true">◈</span><span><strong>组织视觉模型</strong><small>ORGANIZATION VISUAL MODEL</small></span></a><div class="edition"><span class="status-dot"></span> UNITED STATES <span class="edition-divider">/</span> EXPLORER 02</div><div class="header-actions"><span class="snapshot" id="snapshot-date"></span><button id="btn-outline" class="quiet-button">项目纲要 ↗</button><button id="btn-export" class="icon-button" aria-label="导出完整 JSON 数据">↓</button></div></header>
+<div class="shell">
+<aside class="directory" aria-label="组织目录"><div class="directory-intro"><div class="eyebrow">EXPLORE THE SYSTEM</div><h1>从组织，看见世界。</h1><p>权力如何形成共识，<br>资本如何驱动社会。</p></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索组织 / 简称" aria-label="搜索组织" autocomplete="off"><kbd>/</kbd></label><div class="section-label">组织图层 <span>LAYERS</span></div><div id="domain-nav" class="domain-nav" aria-label="领域筛选"></div><div class="section-label directory-label">组织索引 <span id="directory-count"></span></div><div id="entity-list" class="entity-list" aria-label="组织列表"></div><div class="directory-footer"><span class="status-dot"></span> 本地数据 · 来源可追溯 <button id="btn-about" aria-label="查看数据说明">ⓘ</button></div></aside>
+<main id="workspace" class="workspace" tabindex="-1">
+<section class="overview" aria-label="数据概览"><div><div class="eyebrow">INSTITUTIONAL LANDSCAPE</div><h2>美国 · 组织全景<span class="version">V0.2</span></h2></div><div id="stats" class="stats"></div></section>
+<div class="view-toolbar"><nav class="view-tabs" aria-label="展示方式"><button data-view="map" class="active">◎ 地理全景</button><button data-view="structure">⌘ 组织层级</button><button data-view="finance">⇄ 金融流转</button></nav><button id="btn-reset" class="quiet-button" title="重置当前视图">↺ 重置视图</button></div>
+<section class="visual-panel" aria-label="组织可视化"><div class="visual-heading"><div><span class="live-square"></span><span id="view-kicker">美国组织分布</span></div><span id="view-count"></span></div>
+<div id="map-view" class="map-stage"><svg id="us-map" viewBox="0 0 1000 650" role="group" aria-label="美国组织地理分布，可拖动平移和缩放"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#172735" stroke-width=".5"/></pattern><radialGradient id="ocean"><stop offset="0" stop-color="#102635"/><stop offset="1" stop-color="#09131d"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3"/></filter><marker id="map-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#56d7c2"/></marker><marker id="funding-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#f2bb77"/></marker></defs><rect width="1000" height="650" fill="url(#ocean)"/><rect width="1000" height="650" fill="url(#grid)"/><g id="map-camera"><g id="map-land"></g><g id="map-lines"></g><g id="map-pins"></g></g></svg><div class="map-caption"><span>U N I T E D &nbsp; S T A T E S</span><small>组织与资源的空间切面</small></div><div class="map-tools" aria-label="地图操作"><button id="btn-plus" aria-label="放大地图">＋</button><button id="btn-minus" aria-label="缩小地图">−</button><button id="btn-fit" aria-label="显示整个美国">⌖</button></div><div class="map-layer-options"><label><input type="checkbox" id="show-relations" checked> 隶属连线</label><label><input type="checkbox" id="show-events" checked> 事件光圈</label><label><input type="checkbox" id="show-funding"> 金融机制</label></div><div id="map-cluster" class="map-cluster" hidden></div><div id="map-tooltip" class="map-tooltip" hidden></div><div class="map-coordinate" id="map-coordinate">USA / 50 STATES + DC</div></div>
+<div id="structure-view" class="structure-stage" hidden></div><div id="finance-view" class="finance-stage" hidden></div><div class="visual-footer"><div id="legend" class="legend"></div><span id="view-note"></span><button id="btn-mobile-profile" class="mobile-profile">查看当前组织档案 ↗</button></div></section>
+<div class="explore-routes" aria-label="推荐探索路径"><span>探索路径</span><button data-route="branches">三权分立 <b>↗</b></button><button data-route="money">货币与信贷 <b>↗</b></button><button data-route="universities">大学与创新 <b>↗</b></button><button data-route="companies">产业与资本 <b>↗</b></button></div>
+<section class="events-section" aria-label="近期事件"><div class="events-heading"><div><span class="eyebrow">SIGNAL BOARD</span><h2>事件观察 <span id="event-count"></span></h2></div><div class="event-filters"><label class="entity-event-filter"><input type="checkbox" id="events-selected"> 当前组织</label><select id="event-period" aria-label="事件时间范围"><option value="90">近 90 天</option><option value="30">近 30 天</option><option value="all">全部记录</option></select></div></div><div id="events-list" class="events-list"></div><p class="event-disclaimer">公开来源快照，按来源日期排序；地图光圈定位到关联机构，并非事件发生地。<span id="event-asof"></span></p></section>
+<footer class="workspace-footer"><span>结构 · 空间 · 治理 · 资源</span><span>来源开放，未知保留。<button id="btn-method">模型与数据边界 ↗</button></span></footer>
+</main>
+<aside class="inspector" aria-label="组织档案"><div class="inspector-top"><span class="eyebrow">ORGANIZATION DOSSIER</span><span class="crosshair">⌖</span></div><div id="inspector-content"></div></aside>
 </div>
-<script>const ATLAS_DATA = /*__EMBEDDED_DATA__*/;</script>
-<script>/*__INLINE_JS__*/</script>
-</body>
-</html>
+<dialog id="outline-dialog" aria-labelledby="outline-title"><div class="dialog-top"><span class="eyebrow">THE MODEL / 02</span><button id="btn-close-outline" class="icon-button" aria-label="关闭纲要">×</button></div><h2 id="outline-title">组织视觉模型</h2><p class="dialog-lead">以组织为观察单位，把地理位置、权力结构、共识形成和金融循环放进同一幅可探索的社会地图。</p><div class="outline-grid"><article><span>01 / SPACE</span><h3>组织在哪里</h3><p>政府机关、大学、企业与金融机构映射到美国地图。地点记录采用注明精度的城市或总部位置。</p></article><article><span>02 / STRUCTURE</span><h3>组织属于谁</h3><p>区分正式组成、控制与汇报。三权分立体现为三个平行分支；国家范围本身不构成对企业或大学的控制。</p></article><article><span>03 / GOVERNANCE</span><h3>如何形成决定</h3><p>“最高化身”落实为最高治理主体或法定岗位。“收敛机制”描述议事、投票、授权和问责，而非推测内部动机。</p></article><article><span>04 / FINANCE</span><h3>资源如何流动</h3><p>呈现税收、预算、债券、存贷款、资本市场与科研资金等机制。箭头说明流向；真实金额需独立年度与会计口径。</p></article></div><div class="method-note"><h3>这一版本的边界</h3><p id="model-boundary"></p><p>金融流转为有来源的机制示意，线宽不代表金额；制度机制不等同于某两家机构之间已发生交易。新闻是人工核验的日期快照。金融图中的家庭、投资者等是概念部门，不计为组织。</p><p>地图由 Census 衍生的州界数据离线绘制，包含阿拉斯加与夏威夷插图。区域坐标是近似位置，不用于导航。参考 <a href="https://github.com/koala73/worldmonitor" target="_blank" rel="noopener noreferrer">World Monitor</a> 与 <a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener noreferrer">God’s Eye View</a> 的多层空间观察体验；本项目独立实现。</p></div></dialog>
+<div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+<script>const ATLAS_DATA = /*__EMBEDDED_DATA__*/;</script><script>/*__INLINE_JS__*/</script>
+</body></html>

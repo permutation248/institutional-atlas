@@ -7,7 +7,7 @@ jurisdiction: US
 domain: university
 official_url: https://www.berkeley.edu/
 website_type: official
-function: 加利福尼亚大学系统成员校区。
+function: 通过教学、研究与公共服务贡献知识。
 leader:
   name: Rich Lyons
   title: Chancellor of UC Berkeley
@@ -16,7 +16,9 @@ leader:
   evidence_url: https://www.berkeley.edu/about/leadership/
 employee_count: null
 financial_profile: []
-publications: []
+publications:
+- label: 校区官方新闻
+  url: https://news.berkeley.edu/
 parents:
 - parent_id: uc-system
   type: PART_OF
@@ -29,16 +31,32 @@ sources:
   description: 校区官网
 - url: https://www.berkeley.edu/about/leadership/
   description: 校长当前任职信息
-verified_at: '2026-10-19'
-verification_status: verified
+- url: https://www.berkeley.edu/about/
+  description: 官方所在地城市依据；坐标仅为城市级近似点
+- url: https://www.universityofcalifornia.edu/about-uc/leadership
+  description: 系统 President 统筹十校区 Chancellor，Academic Senate 参与学术治理
+verified_at: '2026-10-24'
+verification_status: partial
+location:
+  city: Berkeley
+  state: CA
+  lat: 37.872
+  lon: -122.273
+  precision: city
+  evidence_url: https://www.berkeley.edu/about/
+mission: 通过教学、研究与公共服务贡献知识。
+ecosystem_role: 湾区公立研究、社会流动与技术创新节点。
+governance:
+  apex: UC Regents、系统 President 与校区 Chancellor
+  mechanism: 校区在系统治理下运行，学术事务由 Academic Senate 参与。
+  evidence_url: https://www.universityofcalifornia.edu/about-uc/leadership
+research_notes: 局部复核职责、校区官网和系统治理；城市点为近似位置，校园范围不等于市中心。校区独立财务与未列负责人待核验。
+funding_model: null
+research_reviewed_at: '2026-10-24'
 ---
 
 # 加州大学伯克利分校 / UC Berkeley
 
-## 本机构承担什么功能？
+通过教学、研究与公共服务贡献知识。
 
-加利福尼亚大学系统成员校区。
-
-## 备注与边界
-
-待继续核验更细的内部机构、公开发布渠道、财务口径及负责人。
+局部复核职责、校区官网和系统治理；城市点为近似位置，校园范围不等于市中心。校区独立财务与未列负责人待核验。

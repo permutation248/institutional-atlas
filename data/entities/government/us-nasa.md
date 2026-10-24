@@ -31,10 +31,22 @@ sources:
   description: 行政分支包含独立机构的范围说明
 - url: https://www.nasa.gov/people/jared-isaacman/
   description: 公开负责人页面；采集日为 2026-10-19，任职生效日不由采集日推断
+- url: https://www.usa.gov/agencies/national-aeronautics-and-space-administration
+  description: 2026-10-24 使命／治理／位置／资金机制补充
 verified_at: '2026-10-19'
 verification_status: partial
-research_reviewed_at: '2026-10-19'
-research_notes: 本轮阅读官方正文，核验名称、职责、所列结构边与负责人。员工规模、财务口径及完整内设机构尚未核验。
+research_reviewed_at: '2026-10-24'
+research_notes: 本轮阅读官方正文，核验名称、职责、所列结构边与负责人。员工规模、财务口径及完整内设机构尚未核验。 2026-10-24 新增字段按所附来源局部复核；原负责人日期保留，不代表今天重查。
+mission: 探索太空，研究地球、太阳系与宇宙。
+ecosystem_role: 公共空间科学、探索与技术需求节点。
+location:
+  lat: 38.9072
+  lon: -77.0369
+  city: Washington
+  state: DC
+  precision: city
+  evidence_url: https://www.usa.gov/agencies/national-aeronautics-and-space-administration
+  note: 城市级近似坐标，非建筑入口；仅定位组织办公城市，不代表事件发生地。
 ---
 
 # 美国国家航空航天局 / National Aeronautics and Space Administration
